@@ -1,5 +1,3 @@
-
-
 from django.contrib.auth.models import AbstractUser
 from django.db import models
 
@@ -9,6 +7,6 @@ class Users(AbstractUser):
 
     is_verified = models.BooleanField(default=False)
     is_login = models.BooleanField(default=False)
-    contact_number = models.IntegerField()
-    otp = models.IntegerField()
+    contact_number = models.BigIntegerField(default=0)
+    otp = models.IntegerField(default=0)
 
